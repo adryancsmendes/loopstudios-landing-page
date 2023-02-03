@@ -9,8 +9,28 @@
     justify-content: center
     align-items: center
 
+@mixin bg-img($folder,$img)
+    background-image: linear-gradient(to right, rgba(0,0,0,0.8), rgba(0,0,0,0.1)), url('../images/#{$folder}/#{$img}')
+    background-size: 110%
+    background-position: center
+    background-repeat: no-repeat
+    filter: grayscale(100%)
+    transition: .6s
+
+    &:hover
+        background-image: linear-gradient(to right, rgba(0,0,0,0), rgba(0,0,0,0)), url('../images/#{$folder}/#{$img}')
+        background-size: 120%
+        transition: .6s
+        filter: grayscale(0)
+        
+        
+
 @mixin tablet-devices
     @media(min-width: 480px)
+        @content
+
+@mixin medium-devices
+    @media(min-width: 768px)
         @content
 
 @mixin large-devices
@@ -19,5 +39,9 @@
 
 @mixin extra-large-devices
     @media(min-width: 1200px)
+        @content
+
+@mixin extra-extra-large-devices
+    @media(min-width: 1440px)
         @content
     
