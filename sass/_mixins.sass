@@ -22,7 +22,20 @@
         background-size: 120%
         transition: .6s
         filter: grayscale(0)
-        
+
+@mixin hover-menu-item($top,$width)
+    &:hover
+        transform: scale(1.2)
+        transition: .4s
+
+        &::after
+            content: ''
+            color: variables.$white
+            position: absolute
+            top: $top
+            width: $width
+            height: 2px
+            background: white    
         
 
 @mixin tablet-devices

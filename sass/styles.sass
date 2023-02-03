@@ -110,17 +110,7 @@
                                 flex-direction: column
                                 align-items: center
                                 transition: .4s
-                                &:hover
-                                    transform: scale(1.2)
-                                    transition: .4s
-                                    &::after
-                                        content: ''
-                                        color: variables.$white
-                                        position: absolute
-                                        top: 1.2rem
-                                        width: 50%
-                                        height: 2px
-                                        background: white
+                                @include mixins.hover-menu-item(1.2rem,50%)
                                 
                             a
                                 @include mixins.medium-devices
@@ -133,13 +123,6 @@
 
                                     @include mixins.medium-devices
                                         color: variables.$white
-
-                            
-                            
-
-                                
-
-                        
 
                     .active
                         transform: translateX(0)
@@ -237,6 +220,7 @@
 
                     &-text
                         text-align: center
+
                         @include mixins.medium-devices
                             background: variables.$white
                             position: absolute
@@ -325,6 +309,13 @@
                             text-transform: uppercase
                             font-size: 2rem
                             text-align: center
+                            font-weight: normal
+
+                            @include mixins.medium-devices
+                                font-size: 2.5rem
+
+                            @include mixins.large-devices
+                                font-size: 3rem
 
                         &-button.btn-desktop
                             display: none
@@ -404,6 +395,10 @@
                                             max-width: 9rem
                                             margin-left: 2rem
                                             margin-bottom: 2.5rem
+                                            font-size: 1.7rem
+
+                                        @include mixins.large-devices
+                                            max-width: 11rem
                                             font-size: 2rem
 
                                 .card-1
@@ -491,58 +486,102 @@
                 background: variables.$black
                 color: variables.$white
                 margin-top: 6rem
-                padding: 3rem 0
+                padding: 3rem 0 1rem
                 @include mixins.flex-center
                 flex-direction: column
-                gap: 2.5rem
+                gap: 3rem
 
                 @include mixins.large-devices
                     margin-top: 10rem
+                    flex-direction: row
+                    justify-content: space-between
+                    padding: 3rem 3rem 2rem
+
+                @include mixins.extra-large-devices
+                    padding: 3rem 5rem 2rem
+
+                @include mixins.extra-extra-large-devices
+                    padding: 3rem 10rem 2rem
                 
-                .footer-logo
-                    max-width: 9rem
+                &-first
+                    display: flex
+                    flex-direction: column
+                    gap: 2.5rem
+                    
+                    @include mixins.large-devices
+                        gap: 1.5rem
 
-                    img
-                        max-width: 100%
-                        height: auto
+                    &-logo
+                        max-width: 9rem
 
-                        &:hover
-                            cursor: pointer
+                        img
+                            max-width: 100%
+                            height: auto
 
-                &-page-list
-                    font-size: 0.9rem
-                    font-weight: bold
-                    list-style: none
-                    text-align: center
+                            &:hover
+                                cursor: pointer
+
+                    &-page-list
+                        font-size: 0.9rem
+                        font-weight: bold
+                        list-style: none
+                        text-align: center
+                        display: flex
+                        flex-direction: column
+                        gap: 1.5rem
+
+                        @include mixins.tablet-devices
+                            font-size: 1.2rem
+
+                        @include mixins.large-devices
+                            flex-direction: row
+                            font-size: 0.8rem
+                        li
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            transition: .4s
+                            @include mixins.hover-menu-item(1.2rem,50%)
+
+                            a
+                                &:hover
+                                    cursor: pointer
+                                    
+                &-second
                     display: flex
                     flex-direction: column
                     gap: 1.5rem
-
-                    @include mixins.tablet-devices
-                        font-size: 1.2rem
-
-                    a
-                            &:hover
-                                cursor: pointer
-                                color: variables.$very-dark-gray
-
-                &-social-list
-                    list-style: none
-                    font-size: 1.5rem
-                    color: white
-                    display: flex
-                    gap: 1rem
-
-                    &-item
-
-                        a
-                            &:hover
-                                cursor: pointer
-                                color: variables.$very-dark-gray
+                    align-items: center
+                    
+                    @include mixins.large-devices
                         
-                &-copyright
-                    font-weight: bold
-                    color: variables.$dark-gray
+                        
+                        justify-content: space-between
+                        align-items: flex-end
+
+                    &-social-list
+                        list-style: none
+                        font-size: 1.5rem
+                        color: white
+                        display: flex
+                        justify-content: space-between
+                        width: 100%
+                        max-width: 9rem
+
+                        &-item
+                            display: flex
+                            flex-direction: column
+                            align-items: center
+                            transition: .4s
+                            @include mixins.hover-menu-item(1.8rem,100%)
+                                
+                            a
+                                &:hover
+                                    cursor: pointer
+                                      
+                    &-copyright
+                        font-weight: bold
+                        color: variables.$dark-gray
 
 
 
