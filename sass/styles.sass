@@ -7,16 +7,16 @@
     padding: 0
     box-sizing: border-box
 
+    
     body
-        color: variables.$black
+        @include mixins.dark-mode
         min-height: 100vh
-        background-color: variables.$white
         
         p
             font-size: 0.938rem
 
-        a
-            color: variables.$white
+        a   
+            color: inherit
             text-decoration: none
 
             &:hover
@@ -70,9 +70,46 @@
                             &:hover
                                 cursor: pointer
 
+                        
+                            
+
                             @include mixins.medium-devices
                                 display: none
 
+                        
+
+                    &-theme
+                            padding: 0.5rem
+                            position: absolute
+                            right: 1rem
+                            top: 5rem
+                            width: 4rem
+                            @include mixins.flex-center
+                            justify-content: space-between
+
+                            @include mixins.medium-devices
+                                top: 1rem
+                                right: 3.25rem
+
+                            @include mixins.extra-extra-large-devices
+                                top: 3.5rem
+                                right: 3rem
+
+
+                            &-btn
+                                font-size: 1.25rem
+                                display: flex
+                                flex-direction: column
+                                padding-bottom: 0.5rem
+                                transition: .4s
+
+                                &:hover
+                                    cursor: pointer
+                                    transform: scale(1.2)                           
+
+                            &-btn-active
+                                border-bottom: solid 2px
+                                           
                     &-list
                         font-size: 1.5rem
                         list-style: none
@@ -96,6 +133,9 @@
                             max-width: 20rem
                             gap: 1rem
 
+                        @include mixins.medium-devices-max
+                            color: variables.$white
+
                         @include mixins.large-devices
                             font-size: 1rem
 
@@ -105,7 +145,6 @@
                         li
                             @include mixins.medium-devices
                                 position: relative
-                                
                                 display: flex
                                 flex-direction: column
                                 align-items: center
@@ -119,10 +158,7 @@
 
                                 &:hover
                                     cursor: pointer
-                                    color: variables.$dark-gray
-
-                                    @include mixins.medium-devices
-                                        color: variables.$white
+                                        
 
                     .active
                         transform: translateX(0)
@@ -131,10 +167,15 @@
                         display: flex
                         align-items: flex-start
                         gap: 1.5rem
+                    
+
 
             .active
                 background: variables.$black
                 height: 100vh
+
+
+                    
 
             .principal
 
@@ -220,9 +261,9 @@
 
                     &-text
                         text-align: center
-
+                        transition: .4s
                         @include mixins.medium-devices
-                            background: variables.$white
+                            
                             position: absolute
                             bottom: 0
                             right: 0
@@ -259,7 +300,6 @@
 
                         &-paragraph
                             font-family: 'Alata'
-                            color: variables.$very-dark-gray
                             padding: 0 0.5rem
 
                             @include mixins.extra-large-devices
@@ -323,18 +363,17 @@
                             font-size: 0.8rem
                             font-weight: bold
                             text-transform: uppercase
-                            color: variables.$black
                             letter-spacing: 0.3rem
                             width: 100%
-                            border: solid 2px variables.$black
+                            border-style: solid
+                            border-width: 2px 
                             max-width: 10rem
                             text-align: center
                             padding: 0.75rem 1.5rem
 
                             &:hover
                                 cursor: pointer
-                                background: variables.$black
-                                color: variables.$white
+                                
 
                             @include mixins.medium-devices
                                 display: inline-block
@@ -386,6 +425,7 @@
                                         max-width: 8rem
                                         margin: 1rem
                                         line-height: 2rem
+                                        color: variables.$white
 
                                         @include mixins.tablet-devices
                                             font-size: 1.5rem
@@ -466,18 +506,17 @@
                         font-size: 0.8rem
                         font-weight: bold
                         text-transform: uppercase
-                        color: variables.$black
                         letter-spacing: 0.3rem
                         width: 100%
-                        border: solid 2px variables.$black
+                        border-style: solid
+                        border-width: 2px 
                         max-width: 10rem
                         text-align: center
                         padding: 0.75rem 1.5rem
 
                         &:hover
                             cursor: pointer
-                            background: variables.$black
-                            color: variables.$white
+                            
 
                         @include mixins.medium-devices
                             display: none
@@ -554,8 +593,6 @@
                     align-items: center
                     
                     @include mixins.large-devices
-                        
-                        
                         justify-content: space-between
                         align-items: flex-end
 
@@ -578,12 +615,16 @@
                             a
                                 &:hover
                                     cursor: pointer
-                                      
+                                    
                     &-copyright
                         font-weight: bold
                         color: variables.$dark-gray
 
+.dark-mode
+    @include mixins.dark-mode
 
+.light-mode
+    @include mixins.light-mode
 
 
         

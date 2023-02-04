@@ -18,7 +18,7 @@
   <link rel="stylesheet" href="css/styles.css">
 </head>
 
-<body>
+<body class="light-mode">
 
   <div class="container">
 
@@ -28,7 +28,7 @@
       <nav class="header-nav">
 
         <div class="header-nav-logo">
-          <a href="#"><img src="/images/logo.svg" alt=""></a>
+          <a href="#"><img id="header-nav-logo-img" src="/images/logo.svg" alt=""></a>
           <img id="menu-hamburguer" src="/images/icon-hamburger.svg" alt="">
         </div>
 
@@ -39,6 +39,11 @@
           <li class="header-nav-list-item"><a href="#">Products</a></li>
           <li class="header-nav-list-item"><a href="#">Support</a></li>
         </ul>
+
+        <div class="header-nav-theme">
+          <a class="header-nav-theme-btn header-nav-theme-btn-active light-mode-btn"><i class="fa-solid fa-sun"></i></a>
+          <a class="header-nav-theme-btn dark-mode-btn"><i class="fa-solid fa-moon"></i></a>
+        </div>
 
       </nav>
 
@@ -58,10 +63,10 @@
 
         <img src="/images/mobile/image-interactive.jpg" alt="" class="principal-section-two-img">
 
-        <div class="principal-section-two-text">
-          <h2 class="principal-section-two-text-title">The leader in interactive VR</h2>
+        <div class="principal-section-two-text bg-theme">
+          <h2 class="principal-section-two-text-title title-theme">The leader in interactive VR</h2>
 
-          <p class="principal-section-two-text-paragraph">Founded in 2011, Loopstudios has been producing world-class
+          <p class="principal-section-two-text-paragraph text-theme">Founded in 2011, Loopstudios has been producing world-class
             virtual reality
             projects for some of the best companies around the globe. Our award-winning
             creations have transformed businesses through digital experiences that bind
@@ -75,8 +80,8 @@
       <section class="principal-section-three">
 
         <div class="principal-section-three-links">
-          <h2 class="principal-section-three-links-title">Our creations</h2>
-          <a href="#" class="principal-section-three-links-button btn-desktop">See all</a>
+          <h2 class="principal-section-three-links-title title-theme">Our creations</h2>
+          <a href="#" class="principal-section-three-links-button btn-desktop btn">See all</a>
         </div>
 
         <ul class="principal-section-three-list">
@@ -138,7 +143,7 @@
           </li>
         </ul>
 
-        <a href="#" class="principal-section-three-button btn-mobile">See all</a>
+        <a href="#" class="principal-section-three-button btn-mobile btn">See all</a>
       </section>
 
 

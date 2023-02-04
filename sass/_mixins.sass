@@ -30,16 +30,18 @@
 
         &::after
             content: ''
-            color: variables.$white
             position: absolute
             top: $top
             width: $width
             height: 2px
             background: white    
-        
 
 @mixin tablet-devices
     @media(min-width: 480px)
+        @content
+
+@mixin medium-devices-max
+    @media(max-width: 767px)
         @content
 
 @mixin medium-devices
@@ -57,4 +59,48 @@
 @mixin extra-extra-large-devices
     @media(min-width: 1440px)
         @content
+
+@mixin dark-mode
+    transition: .4s
+    background-color: variables.$dark-mode-black
+    .bg-theme
+        background: variables.$dark-mode-black
+
+    .title-theme
+        color: variables.$pink
+
+    .text-theme
+        color: variables.$pink
+
+    .btn
+        color: variables.$pink
+        border-color: variables.$pink
+
+        &:hover
+            background: variables.$pink
+            color: variables.$black
+            border-color: variables.$pink
+
+@mixin light-mode
+    transition: .4s
+    .bg-theme
+        background: variables.$white
+
+    .title-theme
+        color: variables.$black
+
+    .text-theme
+        color: variables.$very-dark-gray
+    
+
+    background-color: variables.$white
+
+    .btn
+        color: variables.$black
+        border-color: variables.$black
+
+        &:hover
+            background: variables.$black
+            color: variables.$white
+            border-color: variables.$black
     
