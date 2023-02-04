@@ -70,13 +70,8 @@
                             &:hover
                                 cursor: pointer
 
-                        
-                            
-
                             @include mixins.medium-devices
                                 display: none
-
-                        
 
                     &-theme
                             padding: 0.5rem
@@ -167,7 +162,11 @@
                         display: flex
                         align-items: flex-start
                         gap: 1.5rem
-                    
+
+                        li
+                            @include mixins.medium-devices-max
+                                &:hover
+                                    color: variables.$dark-gray
 
 
             .active

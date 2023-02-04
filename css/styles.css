@@ -219,6 +219,11 @@
   align-items: flex-start;
   gap: 1.5rem;
 }
+@media (max-width: 767px) {
+  * body .container .header-nav .active li:hover {
+    color: #8C8C8C;
+  }
+}
 * body .container .active {
   background: #000;
   height: 100vh;
