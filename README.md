@@ -28,7 +28,7 @@ O desafio aqui foi construir essa Loopstudios landing page e deixá-lo o mais pr
 
 ### Links
 
-- Live Site URL: [Loopstudios landing page](#)
+- Live Site URL: [Loopstudios landing page](https://loopstudios-landing-page-swart.vercel.app/)
 
 
 ## Meu processo
@@ -36,7 +36,7 @@ O desafio aqui foi construir essa Loopstudios landing page e deixá-lo o mais pr
 ### Construído com
 
 - HTML5 semântico
-- CSS proriedades customizadas
+- CSS
 - Flexbox
 - Mobile-first workflow
 - [SASS](https://sass-lang.com/) - SASS (Pré-processador CSS)
@@ -45,7 +45,7 @@ O desafio aqui foi construir essa Loopstudios landing page e deixá-lo o mais pr
 
 ### O que eu aprendi
 
-Neste projeto...
+Neste projeto eu pude reforçar meus conhecimentos prévios em HTML, CSS, SASS e JavaScript. Aprendi como, utilizando SASS e JavaScript, implementar a possibilidade da mudança das cores da página de um tema claro para um tema escuro.
 
 
 ### Desenvolvimento contínuo
