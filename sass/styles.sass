@@ -128,14 +128,25 @@
                             max-width: 20rem
                             gap: 1rem
 
+                            @include mixins.firefox-style
+                                gap: 0
+                                justify-content: space-between
+                                max-width: 23rem
+
                         @include mixins.medium-devices-max
                             color: variables.$white
 
                         @include mixins.large-devices
                             font-size: 1rem
 
+                            @include mixins.firefox-style
+                                max-width: 30rem
+
+
                         @include mixins.extra-large-devices
                             font-size: 1.2rem
+
+                            
 
                         li
                             @include mixins.medium-devices
@@ -144,15 +155,28 @@
                                 flex-direction: column
                                 align-items: center
                                 transition: .4s
+
                                 @include mixins.hover-menu-item(1.2rem,50%)
+                                    
+                                @include mixins.firefox-style
+                                    @include mixins.hover-menu-item(1.2rem,50%)
+                                    
                                 
                             a
+
+                                @include mixins.firefox-style
+                                    max-width: 2rem
+
                                 @include mixins.medium-devices
                                     &::first-letter
                                         text-transform: uppercase
 
                                 &:hover
                                     cursor: pointer
+
+                                @include mixins.firefox-style
+                                    max-width: 3rem
+
                                         
 
                     .active
@@ -223,7 +247,6 @@
 
                         @include mixins.large-devices
                             max-width: 37rem
-                            
 
                 &-section-two
                     padding: 0 1.5rem

@@ -27,6 +27,7 @@
     &:hover
         transform: scale(1.2)
         transition: .4s
+        
 
         &::after
             content: ''
@@ -103,4 +104,8 @@
             background: variables.$black
             color: variables.$white
             border-color: variables.$black
-    
+
+@mixin firefox-style
+    @-moz-document url-prefix()
+        @content
+ 
